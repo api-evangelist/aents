@@ -1,0 +1,92 @@
+generated: '2026-09-10'
+method: probed
+source: https://aents.co/.well-known/
+# AENTS — /.well-known/ + APIs.json discovery probe
+#
+# RECORDED ABSENCE. Every named path below was requested on every host this record
+# knows and every one missed. aents.co (Hugo static site) and www.aentscope.com
+# (Next.js application) return a real 404 with their own HTML 404 page; the
+# GitBook-hosted docs.aentscope.com answers HTTP 401 "Authentication missing to
+# access this content" for EVERY path, including the negative control, so nothing
+# on that host can be read anonymously.
+#
+# NO WellKnown and NO SecurityTxt pointer is emitted in apis.yml. A pointer asserts
+# that the PROVIDER serves that surface; nothing here was served.
+
+name: AENTS
+slug: aents
+checked: '2026-09-10'
+hit_count: 0
+served_document_count: 0
+pointer_emitted: false
+path_echo_control: passed   # negative-control path returned the same 404/401 as every real path
+
+hosts:
+- host: https://aents.co
+  note: Marketing site, Hugo static. Distinct HTML 404 body on every miss.
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+  - {path: /.well-known/ucp.json, status: 404, file: null}
+  - {path: /.well-known/acp.json, status: 404, file: null}
+  - {path: /.well-known/aauth-resource.json, status: 404, file: null}
+  - {path: /.well-known/apis.json, status: 404, file: null}
+  - {path: /apis.json, status: 404, file: null}
+  - {path: /apis.yml, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+  - {path: /.well-known/agent.json, status: 404, file: null}
+  - {path: /.well-known/aents-negative-control-7f3ab91c.json, status: 404, file: null}
+- host: https://www.aentscope.com
+  note: >-
+    AENTSCOPE application host (Next.js on Vercel). Root renders the tenant sign-in
+    screen ("회사 이메일로 로그인" — sign in with your company email).
+  documents:
+  - {path: /.well-known/security.txt, status: 404, file: null}
+  - {path: /.well-known/openid-configuration, status: 404, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 404, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 404, file: null}
+  - {path: /.well-known/api-catalog, status: 404, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 404, file: null}
+  - {path: /.well-known/ucp.json, status: 404, file: null}
+  - {path: /.well-known/acp.json, status: 404, file: null}
+  - {path: /.well-known/aauth-resource.json, status: 404, file: null}
+  - {path: /.well-known/apis.json, status: 404, file: null}
+  - {path: /apis.json, status: 404, file: null}
+  - {path: /apis.yml, status: 404, file: null}
+  - {path: /.well-known/agent-card.json, status: 404, file: null}
+  - {path: /.well-known/agent.json, status: 404, file: null}
+  - {path: /.well-known/aents-negative-control-7f3ab91c.json, status: 404, file: null}
+- host: https://docs.aentscope.com
+  note: >-
+    GitBook space (x-gitbook-target response header) serving HTTP 401 "Authentication
+    missing to access this content" on every path, root included. Historically this
+    host served company PDFs (ServiceIntroAentscope.pdf, privacy_policy_latest.pdf);
+    it is not a public API reference and cannot be read anonymously today.
+  documents:
+  - {path: /.well-known/security.txt, status: 401, file: null}
+  - {path: /.well-known/openid-configuration, status: 401, file: null}
+  - {path: /.well-known/oauth-authorization-server, status: 401, file: null}
+  - {path: /.well-known/oauth-protected-resource, status: 401, file: null}
+  - {path: /.well-known/api-catalog, status: 401, file: null}
+  - {path: /.well-known/ai-plugin.json, status: 401, file: null}
+  - {path: /.well-known/ucp.json, status: 401, file: null}
+  - {path: /.well-known/acp.json, status: 401, file: null}
+  - {path: /.well-known/aauth-resource.json, status: 401, file: null}
+  - {path: /.well-known/apis.json, status: 401, file: null}
+  - {path: /apis.json, status: 401, file: null}
+  - {path: /apis.yml, status: 401, file: null}
+  - {path: /.well-known/agent-card.json, status: 401, file: null}
+  - {path: /.well-known/agent.json, status: 401, file: null}
+  - {path: /.well-known/aents-negative-control-7f3ab91c.json, status: 401, file: null}
+
+a2a:
+  agent_card_found: false
+  note: >-
+    /.well-known/agent-card.json and the legacy /.well-known/agent.json were probed on
+    all three hosts. No 200, no JSON body, no AgentCard shape. Per the pipeline contract
+    no a2a/ artifact and no AgentCard pointer is written — an agent card is never
+    generated or derived on a provider's behalf.

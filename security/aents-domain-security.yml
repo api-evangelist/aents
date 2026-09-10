@@ -1,0 +1,43 @@
+generated: '2026-09-10'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+# probe-domain-security.py covers the apis.yml Website host only; the two aentscope.com
+# hosts (the AENTSCOPE application and its GitBook docs space) were probed by hand on
+# 2026-09-10 with openssl s_client, curl -I and dig, and are recorded below with the
+# same fields.
+hosts:
+- host: aents.co
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct  1 23:59:59 2026 GMT
+  hsts: false
+- host: www.aentscope.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Oct 19 15:18:12 2026 GMT
+  hsts: false
+  note: AENTSCOPE tenant application (Next.js on Vercel); root is the sign-in screen.
+- host: docs.aentscope.com
+  https: true
+  tls_version: TLSv1.3
+  hsts: true
+  hsts_max_age: 63072000
+  note: >-
+    GitBook space behind Cloudflare; answers HTTP 401 on every path, so only the TLS
+    and header layer is observable anonymously.
+domains:
+- domain: aents.co
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: false
+- domain: aentscope.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none
+  note: >-
+    SPF delegates mail to Cloudflare (include:_spf.mx.cloudflare.net ~all); DMARC is
+    published in monitor-only mode (p=none, rua=dmarc@aentscope.com). No CAA record and
+    no DS record, so certificate issuance is unconstrained and the zone is unsigned.

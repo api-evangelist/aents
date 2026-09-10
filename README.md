@@ -64,5 +64,19 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Aents is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/aents
+AENTS (엔츠) is a Seoul, South Korea climate-technology company founded in 2021. Its product,
+AENTSCOPE (엔스코프), is an enterprise carbon-management and carbon-accounting SaaS platform for
+greenhouse-gas inventory, Scope 1/2/3 emissions calculation, third-party verification and
+regulatory disclosure reporting (KSSB, IFRS S2, CSRD, GRI, ISSB, CDP), alongside product carbon
+footprint, CBAM, climate physical-risk analysis and Scope 3 supply-chain data collection. AENTS
+pairs the platform with an ESG consulting practice.
+
+**AENTS publishes no public API.** As of 2026-09-10 there is no developer portal, API reference,
+OpenAPI/AsyncAPI/GraphQL contract, SDK, MCP server, agent card or webhook surface on any AENTS
+host. AENTSCOPE's marketed integrations run inward — it consumes the Korea Electric Power
+Corporation (한국전력/KEPCO) API, the Allbaro (올바로) national waste-management API, and customer
+ERP systems (SAP, Douzone) to collect activity data. This profile records that measured absence.
+
+- Website — https://aents.co/
+- AENTSCOPE (tenant sign-in) — https://www.aentscope.com/
+- GitHub organization — https://github.com/AENTS

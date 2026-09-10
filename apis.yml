@@ -1,7 +1,23 @@
 aid: aents
-name: Aents
-description: 'Aents is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: AENTS
+image: https://aents.co/og-default.png
+description: >-
+  AENTS (엔츠) is a Seoul, South Korea climate-technology company founded in 2021 by CEO Gwangbeen
+  Park and CTO Chongsoo Jung. Its product is AENTSCOPE (엔스코프), an enterprise carbon-management
+  and carbon-accounting SaaS platform — described by the company as the first of its kind in
+  Korea, launched in early 2022 — that lets a corporation build a greenhouse-gas inventory,
+  automate Scope 1, 2 and 3 emissions calculation, run third-party verification, and produce
+  disclosure reports aligned to KSSB, IFRS S2, CSRD, GRI, ISSB and CDP, alongside product carbon
+  footprint (PCF/LCA), CBAM, climate physical-risk analysis and a supplier portal for Scope 3
+  value-chain data. AENTS pairs the platform with a climate-expert ESG consulting practice, and
+  publishes a Korean-language blog, newsletter and a free corporate emissions calculator. Named
+  customers include JYP, Nongshim, Woosung and Hansalim. The company raised a Series A led by
+  Envisioning Partners in February 2023 and is also a Mashup Ventures portfolio company. AENTSCOPE
+  is an API CONSUMER rather than an API producer: the company markets automated data collection
+  through connections to external systems — the Korea Electric Power Corporation (한국전력/KEPCO)
+  API, the Allbaro (올바로) national waste-management API, and customer ERP systems including SAP
+  and Douzone — but publishes no public API, developer portal, OpenAPI, SDK or webhook surface of
+  its own.
 url: https://raw.githubusercontent.com/api-evangelist/aents/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
@@ -12,6 +28,16 @@ created: '2026-09-10'
 modified: '2026-09-10'
 tags:
 - Company
+- Climate Tech
+- Carbon Accounting
+- Carbon Management
+- ESG
+- Sustainability
+- Greenhouse Gas
+- Net Zero
+- Emissions Reporting
+- SaaS
+- South Korea
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +45,71 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/aents-domain-security.yml
 - type: Website
-  url: https://equityzen.com/company/aents
+  url: https://aents.co/
+- type: About
+  url: https://aents.co/about/
+- type: Pricing
+  url: https://aents.co/pricing/
+- type: TermsOfService
+  url: https://aents.co/terms-of-use/
+- type: PrivacyPolicy
+  url: https://aents.co/privacy-policy/
+- type: Blog
+  url: https://aents.co/posts/
+- type: BlogRSS
+  url: https://aents.co/posts/index.xml
+- type: FAQ
+  url: https://aents.co/faq/
+- type: Contact
+  url: https://aents.co/get-started/
+- type: CaseStudies
+  url: https://aents.co/customers/
+- type: PressReleases
+  url: https://aents.co/press/
+- type: Newsletter
+  url: https://aents.co/newsletter/
+- type: Login
+  url: https://www.aentscope.com/
+- type: GitHubOrganization
+  url: https://github.com/AENTS
+- type: Plans
+  url: plans/aents-plans-pricing.yml
+- type: RateLimits
+  url: rate-limits/aents-rate-limits.yml
+- type: LLMsTxt
+  url: llms/aents-llms.txt
+x-enrichment:
+  date: '2026-09-10'
+  status: minimal
+  artifacts_added: 5
+  pass: local-v3
+x-coverage:
+  state: none
+  reason: no-developer-program
+  detail: >-
+    AENTS sells AENTSCOPE as a tenant SaaS and an ESG consulting engagement, and its
+    integration story runs INWARD — the platform consumes the KEPCO (한국전력) and Allbaro
+    (올바로) APIs and customer ERP systems to collect activity data — so the company
+    publishes no API of its own: /openapi.json, /swagger.json, /graphql, /llms.txt,
+    /apis.json and every /.well-known/ path return the site's own 404 page on both
+    aents.co and www.aentscope.com, the only docs host (docs.aentscope.com, a GitBook
+    space that historically served company PDFs) answers HTTP 401 on every path
+    including a negative control, and the company GitHub org github.com/AENTS holds one
+    public repository which is a front-end hiring assignment, not API code.
+  evidence:
+  - url: https://aents.co/openapi.json
+    status: 404
+  - url: https://www.aentscope.com/openapi.json
+    status: 404
+  - url: https://aents.co/.well-known/api-catalog
+    status: 404
+  - url: https://aents.co/.well-known/agent-card.json
+    status: 404
+  - url: https://docs.aentscope.com/
+    status: 401
+  - url: https://api.github.com/orgs/AENTS/repos
+    status: 200
+  checked: '2026-09-10'

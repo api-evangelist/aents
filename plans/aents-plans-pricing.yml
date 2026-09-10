@@ -1,0 +1,47 @@
+generated: '2026-09-10'
+method: searched
+source: https://aents.co/pricing/
+name: AENTS — AENTSCOPE plans and pricing
+slug: aents
+checked: '2026-09-10'
+
+plan_count: 0
+currency: null
+free_tier: false
+free_trial: false
+self_serve_signup: false
+pricing_model: custom-quote
+
+note: >-
+  AENTS publishes NO price list and NO named tiers. The pricing page
+  (https://aents.co/pricing/, HTTP 200) is titled "가격 안내 · 맞춤 견적 요청" — pricing
+  guide and custom-quote request — and states plainly that instead of a fixed price
+  table the company provides a quote reflecting the customer's number of legal
+  entities, Scope coverage, integrations and whether third-party verification is
+  included. Its own FAQ answers the question "why is pricing not published?" the same
+  way. plan_count is therefore an honest 0, not a gap in this profile: there is
+  nothing published to record.
+
+quote_factors:
+- id: organizational-boundary
+  label: 조직 경계 규모 — number of legal entities / sites in the reporting boundary
+- id: scope-coverage
+  label: Scope 대응 범위 — whether Scope 1, 2 and/or 3 are in scope
+- id: data-integration
+  label: >-
+    데이터 연동 — number of systems connected (KEPCO 한국전력 API, Allbaro 올바로 API,
+    ERP / SAP / Douzone)
+- id: third-party-verification
+  label: 제3자 검증 — whether third-party assurance is bundled
+- id: consulting-scope
+  label: 컨설팅 범위 — how much expert consulting is included
+- id: seats-and-term
+  label: 사용 인원 · 기간 — number of users and contract length
+
+evidence:
+- url: https://aents.co/pricing/
+  status: 200
+  note: Custom-quote page; no tier names, no prices, no currency.
+- url: https://aents.co/get-started/
+  status: 200
+  note: Inquiry / contact form (문의하기) — the only route to a price.

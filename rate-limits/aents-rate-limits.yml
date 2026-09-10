@@ -1,0 +1,29 @@
+generated: '2026-09-10'
+method: searched
+source: https://aents.co/
+name: AENTS — published API rate limits
+slug: aents
+checked: '2026-09-10'
+
+limit_count: 0
+headers: []
+retry_after: null
+exhaustion_status: null
+
+note: >-
+  AENTS publishes no public API, so there are no published rate limits to record and
+  none could be observed. AENTSCOPE is delivered as a tenant application at
+  https://www.aentscope.com (sign-in only) and the company's own integration story runs
+  the other way — AENTSCOPE CONSUMES the KEPCO (한국전력) and Allbaro (올바로) APIs and
+  customer ERP systems to collect activity data. No developer portal, API reference,
+  OpenAPI or rate-limit documentation exists on any host this record knows
+  (aents.co, www.aentscope.com, docs.aentscope.com). limit_count 0 is a measured zero,
+  not an unchecked field.
+
+evidence:
+- url: https://aents.co/openapi.json
+  status: 404
+- url: https://www.aentscope.com/openapi.json
+  status: 404
+- url: https://docs.aentscope.com/
+  status: 401
