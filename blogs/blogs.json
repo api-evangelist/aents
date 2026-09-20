@@ -12,10 +12,17 @@
       "source": "https://aents.co/posts/",
       "feed_url": "https://aents.co/posts/index.xml",
       "title": "",
-      "saved": 1,
+      "saved": 0,
       "method": "discovered"
+    },
+    {
+      "source": "https://aents.co/posts/index.xml",
+      "feed_url": "https://aents.co/posts/index.xml",
+      "title": "",
+      "saved": 0,
+      "method": "feed"
     }
   ],
-  "post_count": 1,
-  "fetched": "2026-09-13T13:00:00Z"
+  "post_count": 31,
+  "fetched": "2026-09-19T20:17:39Z"
 }
