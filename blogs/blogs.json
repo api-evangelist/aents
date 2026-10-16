@@ -2,13 +2,6 @@
   "repo": "aents",
   "feeds": [
     {
-      "source": "https://aents.co/privacy-policy/",
-      "feed_url": "https://aents.co/privacy-policy/",
-      "title": "",
-      "saved": 0,
-      "method": "none"
-    },
-    {
       "source": "https://aents.co/posts/",
       "feed_url": "https://aents.co/posts/index.xml",
       "title": "",
@@ -21,8 +14,15 @@
       "title": "",
       "saved": 0,
       "method": "feed"
+    },
+    {
+      "source": "https://aents.co/privacy-policy/",
+      "feed_url": "https://aents.co/privacy-policy/",
+      "title": "",
+      "saved": 0,
+      "method": "none"
     }
   ],
   "post_count": 31,
-  "fetched": "2026-10-03T12:30:02Z"
+  "fetched": "2026-10-10T13:15:00Z"
 }
