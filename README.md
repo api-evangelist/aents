@@ -1,4 +1,4 @@
-# Aents
+# AENTS
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,19 +64,96 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-AENTS (엔츠) is a Seoul, South Korea climate-technology company founded in 2021. Its product,
-AENTSCOPE (엔스코프), is an enterprise carbon-management and carbon-accounting SaaS platform for
-greenhouse-gas inventory, Scope 1/2/3 emissions calculation, third-party verification and
-regulatory disclosure reporting (KSSB, IFRS S2, CSRD, GRI, ISSB, CDP), alongside product carbon
-footprint, CBAM, climate physical-risk analysis and Scope 3 supply-chain data collection. AENTS
-pairs the platform with an ESG consulting practice.
+AENTS (엔츠) is a Seoul, South Korea climate-technology company founded in 2021 by CEO Gwangbeen Park and CTO Chongsoo Jung. Its product is AENTSCOPE (엔스코프), an enterprise carbon-management and carbon-accounting SaaS platform — described by the company as the first of its kind in Korea, launched in early 2022 — that lets a corporation build a greenhouse-gas inventory, automate Scope 1, 2 and 3 emissions calculation, run third-party verification, and produce disclosure reports aligned to KSSB, IFRS S2, CSRD, GRI, ISSB and CDP, alongside product carbon footprint (PCF/LCA), CBAM, climate physical-risk analysis and a supplier portal for Scope 3 value-chain data. AENTS pairs the platform with a climate-expert ESG consulting practice, and publishes a Korean-language blog, newsletter and a free corporate emissions calculator. Named customers include JYP, Nongshim, Woosung and Hansalim. The company raised a Series A led by Envisioning Partners in February 2023 and is also a Mashup Ventures portfolio company. AENTSCOPE is an API CONSUMER rather than an API producer: the company markets automated data collection through connections to external systems — the Korea Electric Power Corporation (한국전력/KEPCO) API, the Allbaro (올바로) national waste-management API, and customer ERP systems including SAP and Douzone — but publishes no public API, developer portal, OpenAPI, SDK or webhook surface of its own.
 
-**AENTS publishes no public API.** As of 2026-09-10 there is no developer portal, API reference,
-OpenAPI/AsyncAPI/GraphQL contract, SDK, MCP server, agent card or webhook surface on any AENTS
-host. AENTSCOPE's marketed integrations run inward — it consumes the Korea Electric Power
-Corporation (한국전력/KEPCO) API, the Allbaro (올바로) national waste-management API, and customer
-ERP systems (SAP, Douzone) to collect activity data. This profile records that measured absence.
+**Areas:** Company · Climate Tech · Carbon Accounting · Carbon Management · ESG · Sustainability · Greenhouse Gas · Net Zero · Emissions Reporting · Software-as-a-Service · South Korea
 
-- Website — https://aents.co/
-- AENTSCOPE (tenant sign-in) — https://www.aentscope.com/
-- GitHub organization — https://github.com/AENTS
+## AENTS on APIs.io
+
+Everything profiled for AENTS is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/aents/](https://apis.io/providers/aents/)** — or go straight to one of the APIs or properties below.
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### Security (1)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Aents Domain Security](https://apis.io/security/aents/aents-domain-security/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Aents Plans Pricing](https://apis.io/plans/aents/aents-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Aents Rate Limits](https://apis.io/rate-limits/aents/aents-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://aents.co/)
+- [Pricing](https://aents.co/pricing/)
+- [Blog](https://aents.co/posts/)
+- [Terms of service](https://aents.co/terms-of-use/)
+- [Privacy policy](https://aents.co/privacy-policy/)
+- [GitHub](https://github.com/AENTS)
+
+## API Evangelist rating
+
+**Kin Score 13.1** — emerging · rubric 0.24.0 · scored 2026-10-17
+
+| Facet | Score |
+|---|---|
+| Discoverability | 49.1 |
+| Contract quality | 0.0 |
+| Contract governance | 0.0 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 2.4 |
+| Access clarity | 38.2 |
+
+**Agent readiness 2.5** — human-only
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | — |
+| Auth Clarity | — |
+| Idempotency | — |
+| Error Semantics | — |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | — |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | — |
+| Protected Resource Metadata | — |
+| Dynamic Client Registration | — |
+| Agentic Commerce | — |
+
+**Regulatory alignment 11.5** — Energy & Utilities
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/aents/](https://apis.io/providers/aents/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for AENTS: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/aents/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
